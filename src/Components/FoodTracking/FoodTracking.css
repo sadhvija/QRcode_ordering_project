@@ -1,0 +1,158 @@
+.food-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  background-color: #fffaf0; /* Light background for better contrast */
+}
+
+/* Title Styling */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #d63031; /* Bright red color for title */
+}
+.status-label{
+  color: #060606;
+}
+.status-value{
+  color: #676f71;
+}
+.title{
+  text-align: center;
+}
+.status-card{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+/* Progress Bar Styling */
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  background: lightgray;
+  border-radius: 10px;
+  margin: 15px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #038a3b; /* Green progress bar */
+  border-radius: 10px;
+  transition: width 0.8s ease-in-out;
+}
+.progress-steps{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Food Items Layout (Horizontal Alignment) */
+.food-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 30px;
+  margin: 20px 0;
+}
+.ordered-items{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+
+}
+
+/* Food Item Card */
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffebcc; /* Light orange card background */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Food Image Styling */
+.food-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-image:hover {
+  transform: scale(1.1);
+}
+
+/* Text Styling */
+.food-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d3436; /* Dark gray for better readability */
+  margin-top: 10px;
+}
+
+.food-price {
+  font-size: 16px;
+  color: #e74c3c; /* Red color for price to highlight */
+  font-weight: bold;
+}
+.payment-section {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ /* gap:30px;  */
+ margin-top: 30px;
+
+}
+.payment-buttons{
+  display: flex;
+  gap: 30px;
+}
+
+/* Payment Button */
+.pay-btn {
+  margin: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.pay-btn:hover {
+  background: #c70039;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-items {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .food-item {
+      width: 100%;
+  }
+
+  .food-image {
+      width: 140px;
+      height: 140px;
+  }
+}

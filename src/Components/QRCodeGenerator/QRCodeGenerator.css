@@ -1,0 +1,99 @@
+/* 🌟 Full-Screen Centered Layout */
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #a4cc3a;
+    background: url("https://th.bing.com/th/id/R.c9f8b0522299211eb1c7d581754d1fb0?rik=YU1RWW%2bET0JMxg&riu=http%3a%2f%2finnov8tiv.com%2fwp-content%2fuploads%2f2016%2f10%2fscan-qr-code.jpg&ehk=Wm%2bQJpuboJeAe8vdGJK9grsqM1lF2rzxhG7Vqvsw7RA%3d&risl=&pid=ImgRaw&r=0") no-repeat center center/cover;
+    position: relative;
+}
+
+/* 🌟 Adding an Overlay for Better Contrast */
+.qr-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+/* 🌟 Floating Effect on QR Card */
+.qr-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 280px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* 🌟 Hover Effect on QR Card */
+.qr-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌟 Styled Heading */
+h2 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+/* 🌟 QR Code Styling with Glow Effect */
+.qr-code {
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* 🌟 Glowing Animation */
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    }
+    to {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* 🌟 Description Text */
+p {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 12px;
+}
+
+/* 🌟 Button with Animation */
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect on Button */
+button:hover {
+    background: #ff4500;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(255, 102, 0, 0.5);
+}
+
+

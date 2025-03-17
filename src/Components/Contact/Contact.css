@@ -1,0 +1,213 @@
+/* 🌟 General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    /* background: url('/public/Image/contact.png') no-repeat center center/cover; */
+  }
+  
+  /* 🌟 Contact Page */
+  .contact-page {
+    text-align: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* 🌟 Header */
+  .contact-header {
+    /* background: url('/public/Image/30.png') no-repeat center center/cover; */
+    padding: 60px 20px;
+    color: white;
+    background-color:#a4cc3a;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .contact-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .contact-header p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* 🌟 Contact Banner */
+  .contact-banner {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    /* background: url('/public/Image/contact.png') no-repeat center center/cover; */
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-banner h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color:  #2393d1;
+  }
+  
+  
+  .contact-banner p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* 🌟 Form Container */
+  .contact-form-container {
+    background: white;
+    /* background: url('/public/Image/30.png') no-repeat center center/cover; */
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 🌟 Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-group input {
+    flex: 1;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+  }
+  
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  /* 🌟 Submit Button */
+  .contact-form button {
+    background: #ff6600;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contact-form button:hover {
+    background: #e65c00;
+    transform: scale(1.05);
+  }
+  
+  /* 🌟 Thank You Message */
+  .thank-you-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: green;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  /* 🌟 Footer */
+  .contact-footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  /* 🌟 Animations */
+  @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* 🌟 Responsive Design */
+  @media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2.2rem;
+    }
+  
+    .contact-header p {
+        font-size: 1.1rem;
+    }
+  
+    .contact-banner {
+        padding: 30px;
+    }
+  
+    .form-group {
+        flex-direction: column;
+    }
+  
+    .contact-form-container {
+        padding: 30px;
+    }
+  }
+  
