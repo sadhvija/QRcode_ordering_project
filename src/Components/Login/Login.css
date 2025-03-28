@@ -88,7 +88,10 @@
   .Toastify__toast--error {
     background-color: #d93025;
   }
-  
+  .custom-toast-success{
+    color:#0f9d58;
+    background-color: whitesmoke;
+  }
   /* Mobile responsiveness */
   @media (max-width: 480px) {
     .auth-container {

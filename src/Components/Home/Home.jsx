@@ -19,7 +19,7 @@ export default function Home() {
         </section>
 
         <section className="video-demo-section">
-          <DemoVideo /> {/* ✅ Video is properly embedded now */}
+          <DemoVideo />
           <div className="video-description">
             <h3>Simple, Fast & Contactless Ordering</h3>
             <p>
