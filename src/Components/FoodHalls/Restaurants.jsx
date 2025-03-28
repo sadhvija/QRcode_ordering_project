@@ -9,9 +9,12 @@ const Restaurants = ({ selectedVenue, restaurants, setSelectedRestaurant }) => {
 
   return (
     <div className="restaurants-container">
-      <h2 className="text-2xl font-bold mb-2 text-center">{selectedVenue.name}</h2>
+      
+      {/* <h3 className="text-xl font-semibold mb-4 text-center">Select a Restaurant</h3> */}
+      <h1 className="text-4xl font-bold text-center mb-6">Select a Restaurant</h1>
+      {/* <h2 className="text-2xl font-bold mb-2 text-center">{selectedVenue.name}</h2> */}
       <p className="text-gray-600 mb-6 text-center">{selectedVenue.address}</p>
-      <h3 className="text-xl font-semibold mb-4 text-center">Select a Restaurant</h3>
+
 
       {/* Flexbox container for restaurant cards */}
       <div className="restaurants-list">

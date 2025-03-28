@@ -1,12 +1,14 @@
-/* Viewcart.css */
 
 .viewcart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #f8f9fa;
     min-height: 100vh;
+    background-image: url("/Images/backgr.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .viewcart-title {
@@ -15,4 +17,9 @@
     color: #333;
     margin-bottom: 20px;
   }
-  
+  .text-xl{
+    color:black;
+  }
+  /* body{
+    background-image: url("/Images/backgr.webp");
+  } */

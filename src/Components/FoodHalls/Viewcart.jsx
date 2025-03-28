@@ -1,46 +1,33 @@
-import React, { useState } from "react";  // Import useState
+
+import React, { useState } from "react";
 import "./Viewcart.css";
 import Cart from "./Cart";
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css'; // Import the SweetAlert2 CSS
+import Header from "../LandingPage/Header";
 
 const Viewcart = () => {
   const [cart, setCart] = useState([]);
   const [tableNumber, setTableNumber] = useState('');
-  
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-  };
-
-  const removeFromCart = (index) => {
-    setCart(cart.filter((_, i) => i !== index));
-  };
-
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
-  };
 
   const placeOrder = () => {
-    if (!tableNumber) {
-      alert('Please enter your table number.');
-      return;
-    }
-    alert(`Order placed successfully! Total: $${calculateTotal()}`);
     setCart([]);
     setTableNumber('');
   };
 
   return (
+    <>
+     <Header/>
     <div className="viewcart-container">
-      <h2 className="text-xl font-bold mb-4">Your Cart</h2>
-      {/* <Menu selectedRestaurant={selectedRestaurant} menuItems={menuItems} addToCart={addToCart} /> */}
+     
       <Cart
         cart={cart}
-        removeFromCart={removeFromCart}
-        calculateTotal={calculateTotal}
         placeOrder={placeOrder}
         tableNumber={tableNumber}
         setTableNumber={setTableNumber}
       />
-    </div>
+    </div></>
+    
   );
 };
 

@@ -1,34 +1,48 @@
-import React, { useRef, useState } from "react";
-import demoVideo from "../../assets/foodvideo.mp4"; // Import video from assets
 
-const VideoComponent = () => {
-  const videoRef = useRef(null);
+import React, { useState, useRef } from 'react';
+import './DemoVideo.css';
+
+const DemoVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
 
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
+  const handlePlayVideo = () => {
+    setIsPlaying(true);
+    setTimeout(() => {
+      if (videoRef.current) {
         videoRef.current.play();
       }
-      setIsPlaying(!isPlaying);
-    }
+    }, 500); // Small delay for smoother transition
   };
 
   return (
-    <div>
-      <h2>Watch the Demo</h2>
-      <video ref={videoRef} width="600" controls>
-        <source src={demoVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <br />
-      <button onClick={handlePlayPause}>
-        {isPlaying ? "Pause" : "Play"}
-      </button>
-    </div>
+    <section className="demo-video-section" id="demo">
+      <div className="container">
+        <h2 className="section-title">See How It Works</h2>
+        <div className="video-container">
+          {!isPlaying ? (
+            <div className="video-placeholder">
+              <div className="play-button" onClick={handlePlayVideo}>
+                <i className="fas fa-play"></i>
+              </div>
+             
+              <div className="video-info">
+                <h3>Contactless Ordering Demo</h3>
+                <p>Watch how easy it is to scan, order, and pay</p>
+              </div>
+            </div>
+          ) : (
+            <video 
+              ref={videoRef}
+              src="/assets/foodvideo.mp4"
+              controls
+              className="video-player"
+            />
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default VideoComponent;
+export default DemoVideo;

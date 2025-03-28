@@ -2,6 +2,9 @@
 .home-container {
   text-align: center;
   padding: 20px;
+  background-image: url("/Images/backgr.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Flexbox container for venues */
@@ -51,4 +54,7 @@
 .venue-info p {
   color: gray;
   font-size: 14px;
+}
+.text-2xl{
+  color: black;
 }

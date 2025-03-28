@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../../assets/logo.svg';
+import logoImage from '/assets/logo.svg';
 import './Header.css';
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
           <ul>
             <li><Link to="../Home">Home</Link></li>
             <li><a href="#features">Features</a></li>
-            <li><Link to="#howitsworks">How It Works</Link></li>
+            <li><Link to="/howitsworks">How It Works</Link></li>
 
             {/* Restaurant Type with Dropdown */}
             <li className="dropdown" 
@@ -52,7 +52,7 @@ const Header = () => {
               )}
             </li>
 
-            <li><Link to="/pricing">Pricing</Link></li>
+            {/* <li><Link to="/pricing">Pricing</Link></li> */}
             <li><Link to="/contact" className="btn-primary">Contact Us</Link></li>
           </ul>
         </nav>

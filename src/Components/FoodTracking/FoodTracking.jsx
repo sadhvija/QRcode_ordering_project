@@ -97,7 +97,7 @@ export default function FoodTracking() {
       {showMap && (
         <div className="map-section">
           <h2>Live Tracking</h2>
-          <div className="map-container">
+          {/* <div className="map-container">
             <div className="map">
               <div className="truck-icon" style={{ left: `${truckPosition.left}%`, top: `${truckPosition.top}%` }}>
                 🚚
@@ -106,7 +106,7 @@ export default function FoodTracking() {
               <div className="home-icon">🏠</div>
               <div className="map-road"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
 

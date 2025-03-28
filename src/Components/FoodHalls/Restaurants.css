@@ -5,6 +5,13 @@
     gap: 20px;
     padding: 20px;
   }
+
+  body {
+    background-image: url("/Images/backgr.webp");
+    background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
   
   .restaurant-card {
     cursor: pointer;
@@ -52,4 +59,10 @@
     font-size: 12px;
     margin-top: 5px;
   }
-  
+  .text-4xl{
+    text-align: center;
+  }
+  .text-gray-600{
+    text-align: center;
+    color: #616060;
+  }

@@ -22,6 +22,15 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      city: "",
+      address: "",
+      message: "",
+      feedback: "",
+    });
     setTimeout(() => setSubmitted(false), 3000);
   };
 
@@ -66,6 +75,6 @@ const Contact = () => {
       </footer>
     </div>
   );
-};
+};   
 
 export default Contact;

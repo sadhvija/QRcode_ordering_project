@@ -139,6 +139,18 @@
 .pay-btn:hover {
   background: #c70039;
 }
+.payment-confirmation p{
+   color: #038a3b;
+   border:2px solid black;
+   text-align: center;
+   width:400px;
+}
+.payment-confirmation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

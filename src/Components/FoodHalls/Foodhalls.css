@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+  .food-hall-container{
+    background-image: url("/Images/backgr.webp");
+    background-repeat: no-repeat;
+  }
   
   html, body {
     height: 100%;
